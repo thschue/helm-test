@@ -18,5 +18,7 @@ jobs:
           owner: thschue
           repository: charts
           branch: main
+          index_dir: /
+          target_dir: charts
           commit_username: thschue-bot
           commit_email: admin@t-sc.eu
