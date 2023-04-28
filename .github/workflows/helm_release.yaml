@@ -1,0 +1,23 @@
+name: release-chart
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-chart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish Helm chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          charts_dir: chart
+          charts_url: https://charts.k8sgpt.ai
+          owner: thschue
+          repository: charts
+          branch: main
+          target_dir: charts
+          commit_username: thschue-bot
+          commit_email: admin@t-sc.eu
