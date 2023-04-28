@@ -13,7 +13,7 @@ jobs:
         uses: stefanprodan/helm-gh-pages@master
         with:
           token: ${{ secrets.BOT_GITHUB_TOKEN }}
-          charts_dir: chart
+          charts_dir: charts
           charts_url: https://charts.k8sgpt.ai
           owner: thschue
           repository: charts
